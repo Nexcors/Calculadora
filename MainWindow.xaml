@@ -1,0 +1,58 @@
+﻿<Window x:Class="ProyectoCalculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoCalculadora"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="400">
+    <Grid Name="Calculadora">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Name="Areadatos" Grid.Row="0" Grid.ColumnSpan="4" >
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="80"></RowDefinition>
+                <RowDefinition  Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--Registro datos-->
+            <Border Grid.Row="0" 
+                CornerRadius="10" 
+                Background="LightGray">
+                <TextBlock Name="SubNumberArea" Grid.Row="0" HorizontalAlignment="Stretch" TextAlignment="Right" FontSize="30" Padding="10,15,10,0" Text="" />
+            </Border>
+            <TextBlock Name="NumberArea" Grid.Row="1" HorizontalAlignment="Stretch" TextAlignment="Right" FontSize="50" Padding="10,50,10,0" Text="0" />
+        </Grid>
+        <!--#region Botones-->
+        
+        <!--Registro Numeros-->
+        <Button Name="num16" Grid.Column="0" Grid.Row="1"></Button>
+        <Button Name="num15" Grid.Column="1" Grid.Row="1"></Button>
+        <Button Name="num14" Grid.Column="2" Grid.Row="1"></Button>
+        <Button Name="num12" Grid.Column="0" Grid.Row="2"></Button>
+        <Button Name="num11" Grid.Column="1" Grid.Row="2"></Button>
+        <Button Name="num10" Grid.Column="2" Grid.Row="2"></Button>
+        <Button Name="num8" Grid.Column="0" Grid.Row="3"></Button>
+        <Button Name="num7" Grid.Column="1" Grid.Row="3"></Button>
+        <Button Name="num6" Grid.Column="2" Grid.Row="3"></Button>
+        <Button Name="num3" Grid.Column="1" Grid.Row="4"></Button>
+
+        <!--Operadores-->
+        <Button Name="resultado" Grid.Column="3" Grid.Row="4"></Button>
+        <Button Name="multiplicacion" Grid.Column="3" Grid.Row="1"></Button>
+        <Button Name="suma" Grid.Column="3" Grid.Row="3"></Button>
+        <Button Name="resta" Grid.Column="3" Grid.Row="2"></Button>
+        <Button Name="coma" Grid.Column="2" Grid.Row="4"></Button>
+        <Button Name="cambio_de_signo" Grid.Column="0" Grid.Row="4"></Button>
+    </Grid>
+</Window>
